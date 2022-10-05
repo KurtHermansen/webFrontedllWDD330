@@ -1,0 +1,39 @@
+.wrapper {
+    background-color: white;
+    display: flex;
+
+    justify-content: center;
+}
+
+.board {
+    display: grid;
+    grid-gap: 5px;
+    background-color: black;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px ;
+}
+
+.board > div {
+    background-color: white;
+    text-align: center;
+    font-size: 5rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+.clear {
+    text-align: center;
+    background-color: gainsboro;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 150px;
+    padding: 25px;
+    margin: 25px auto;
+}
+
+.hidden {
+    display: none;
+}
