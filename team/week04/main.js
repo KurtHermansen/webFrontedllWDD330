@@ -1,6 +1,5 @@
 const board = document.querySelector('.board');
 const clear = document.querySelector('.clear');
-const children = Array.from(board.children);
 const hide1 = document.getElementById('player1');
 const hide2 = document.getElementById('player2');
 
