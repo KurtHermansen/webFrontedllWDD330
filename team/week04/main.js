@@ -11,6 +11,9 @@ let player = player1
 
 
 function playerMove(evt) {
+    if (evt.target.innerHTML === 'X' || evt.target.innerHTML === 'O') {
+        alert('THIS SQUARE IS TAKEN! PICK AGAIN!')
+    } else {
     evt.target.innerHTML = player 
     if (player === player1) {
         player = player2;
@@ -21,6 +24,7 @@ function playerMove(evt) {
         hide2.classList.add('hidden');
         hide1.classList.remove('hidden');
     }
+}
 }
 
 function clearBoard() {
