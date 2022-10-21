@@ -18,14 +18,10 @@ class Controller {
         if (task.complete === false || task.complete === "false"){
             value = true;
             this.todoModel.setNameValue(title, value);
-            console.log(value)
-            console.log(this.todoModel.getTodoByTitle(title))
             this.showTasks();
         } else if (task.complete === true || task.complete === "true") {
             value = false;
             this.todoModel.setNameValue(title, value);
-            console.log(value)
-            console.log(this.todoModel.getTodoByTitle(title))
             this.showTasks();
         }
         
@@ -41,12 +37,6 @@ class Controller {
     }
     toggleMenu() {
         document.getElementsByClassName('navOpen')[0].classList.toggle('nav-close');
-    }
-    showTaskDetail(title, Array) {
-        const task = this.todoModel.getTodoByTitle(title)
-        // console.log(task)
-        // console.log(title)
-        // console.log(Array)
     }
     filterMenu() {
         document.getElementsByClassName('filOpen')[0].classList.toggle('fil-close');
@@ -64,13 +54,9 @@ class Controller {
         this.addTaskListener();
     }
     addTask() {
-        // Get the modal
+ 
         let modal = document.getElementById("myModal");
-
-        // Get the button that opens the modal
         let btn = document.getElementById("myBtn");
-
-        // Get the <span> element that closes the modal
         let span = document.getElementsByClassName("close")[0];
         span.addEventListener('click', e => {
             modal.style.display = 'none';
@@ -87,13 +73,6 @@ class Controller {
         const formDescription = form.elements.description.value
         const formCategory = form.elements.category.value
         const formDateTime = form.elements.dateTime.value 
-
-        console.log(form)
-        console.log(formTitle)
-        console.log(formComp)
-        console.log(formDescription)
-        console.log(formCategory)
-        console.log(formDateTime)
 
         const task = {
                     title: formTitle,
@@ -118,16 +97,13 @@ class Controller {
         const add = document.querySelector('.add');
         const taskArray = Array.from(this.parentElement.children);
         taskArray.forEach(child => {
-            // const compArray = Array.from(child.children)
+
             child.children[0].addEventListener('click', e => {
                 this.updateComplete(e.currentTarget.dataset.name, child.dataset.name)
             })
             child.lastChild.addEventListener('click', e => {
                 this.deleteTask(e.currentTarget, child.dataset.name)
             } )
-            child.addEventListener('click', e => {
-                this.showTaskDetail(e.currentTarget.dataset.name, taskArray)
-            })
         })
 
         addTask.addEventListener('click', () => {this.addTask()});
