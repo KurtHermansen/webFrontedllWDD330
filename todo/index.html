@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>ToDo App</title>
+</head>
+<body>
+    <main>
+    <div class="banner">
+        <h1>ToDo List</h1>
+    </div>
+    <div class="nav">
+        <ul class="navOpen">
+            <li class="menu">
+                <a><i class="fa-solid fa-bars"></i></a>
+            </li>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="wireframe.html">Wireframes</a>
+            </li>            
+        </ul>
+        <ul class="filOpen">
+            <li class="filter"><a><i class="fa-solid fa-filter"></i></i></a></li>
+            
+            <li>
+                <a href="#" class="completed">Completed Tasks</a>
+            </li>
+            <li>
+                <a href="#" class="notComplete">Not Completed Tasks</a>
+            </li>
+            <li>
+                <a href="#" class="reset">Reset</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="taskList" class="task-list">
+    </div>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          
+          <span class="close">&times;</span>
+          <form name="task" method="post" class="formTask">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title">
+            <input type="checkbox" id="complete" name="complete" value=false>
+            <label for="description">Description: </label>
+            <input type="text" name="description" id="description">
+            <label for="category">Category:</label>
+            <select name="category" id="categoury">
+                <option value="School">School</option>
+                <option value="Physical">Physical</option>
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+                <option value="Church">Church</option>
+            </select>
+            <label for="dateTime">Date or Time:</label>
+            <input type="text" name="dateTime" id="dateTime">
+            <!-- <input type="submit" value="ADD" class="add"> -->
+            <div class="add">Add</div>
+          </form>
+        </div>
+      
+      </div>
+      
+
+    <div class="addTask">Add ToDo</div>
+</main>
+
+    <script src="app.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/966a6d5b49.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -14,18 +14,18 @@ export default class Controller {
         this.addHikeListener();
     }
 
-    showOneHike (hikeName) {
-
+    showOneHike (hikeName, array) {
+        console.log(array)
         const hike = this.hikeModel.getHikeByName(hikeName);
         this.hikeView.renderHikeDetail(this.parentElement, hike).ontouchend = () => {
-            this.showHikes();
+            this.showHikes();            
         };
     }
     addHikeListener() {
         const childrenArray = Array.from(this.parentElement.children);
     childrenArray.forEach(child => {
       child.addEventListener("touchend", e => {
-        this.showOneHike(e.currentTarget.dataset.name);
+        this.showOneHike(e.currentTarget.dataset.name, childrenArray);
             });
         });
     }

@@ -1,0 +1,228 @@
+/*  COLORS
+main color: #0a2463 dark blue
+accest Color: #3e92cc light blue
+background Color: #fffaff white
+accent Color: #d8315b red
+accent Color: #fffcf2 light tan
+
+*/
+
+/* FONTS 
+Titles: Oswald
+Text: work
+
+font-family: 'Oswald', sans-serif;
+font-family: 'Work Sans', sans-serif;
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Work+Sans&display=swap');
+
+
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+}
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+main {
+    margin: 0 auto;
+    max-width: 600px;
+}
+/* banner */
+.banner {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #0a2463;
+    color: #fffaff;
+    text-align: center;
+}
+/* NAV */
+.nav {
+    display: flex;
+    flex-direction: row;
+    background-color: #d8315b;
+    justify-content: space-between;
+    margin: 0 1rem;
+    color: #fffaff ;
+}
+li a {
+    color: white;
+
+}
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.navOpen, .nav-close {
+    margin: 0;
+    text-align: left;
+
+}
+.fil-close, .filOpen {
+    margin: 0;
+    text-align: right;
+    padding: .5rem;}
+
+.navOpen li:first-child {
+    display: block;
+    padding: .25rem;
+}
+.navOpen li {
+    display: none;
+}
+
+.nav-close li {
+    display: block;
+    padding: .25rem;
+    
+}
+.filOpen li:first-child {
+    display: block;
+    padding: .25rem;
+}
+.filOpen li {
+    display: none;
+}
+
+.fil-close li {
+    display: block;
+    padding: .25rem;
+
+}
+
+/* TASK CARDS */
+
+.task-list {
+    margin: 0 auto;
+    margin: 1rem;
+}
+
+.task-card {
+    display: flex;
+    border: 1px solid #0a2463;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fffcf2;
+    color: #0a2463;
+}
+.task-card p {
+    display: none;
+}
+.complete {
+    height: 50px;
+    background-color: white;
+    color: #0a2463;
+    width: 50px;
+    border: 1px solid #0a2463;
+    margin: 5px;
+}
+.deleteTask {
+    height: 50px;
+    width: 45px;
+    border: 1px solid black;
+    margin: 5px;
+    background-color: #d8315b;
+    color: white;
+}
+i {
+    text-align: center;
+    padding: 5px;
+    font-size: 2.5rem;
+
+}
+.addTask {
+    padding: .5rem;
+    margin: 1rem auto;
+    background-color: #3e92cc;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    align-self: center;
+    width: 40%;
+    text-align: center;
+}
+img {
+    width: 100%;
+    max-width: 500px;
+}
+
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    align-items: center;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fffcf2;
+    box-shadow: 0 0 15px gray;
+    border-radius: 15px;
+    margin: 1rem auto;
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 400px;
+  }
+  
+  form {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 1rem;  
+
+  }
+  #complete {
+    display: none;
+  }
+
+  label {
+    display: block;
+    width: 95%;
+    padding: 1rem .5rem .25rem .5rem;
+  }
+  input, select {
+    width: 90%;
+    padding: .25rem;
+  }
+
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .add {
+    padding: .5rem;
+    margin-top: 1rem;
+    background-color: #3e92cc;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    align-self: center;
+    width: 30%;
+    text-align: center;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
