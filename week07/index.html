@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://kurthermansen.github.io/webFrontedllWDD330/css/style.css">
+    <title>Week 7 Notes</title>
+</head>
+<body>
+    <div class="banner">
+        <h1>WDD 330 Portfolio</h1>
+    </div> 
+
+    <h2>Week 7 Notes</h2>
+
+    <div class="notes">
+        <ul>
+            <li><strong>Chapter 11: Further functions</strong></li>
+            <p>Having a mess of nested functions has always been one of the most complicated parts about programming. I really like the use of promises that they give in the reading. You could log in a user, get the users information and then load the game with nested functions but is gets very tangled and unreadable fast. As shown below. </p>
+            <p>login(userName, function(error,user) {<br>
+                if(error){<br>
+                    throw error;<br>
+                } else {  <br>
+                    getPlayerInfo(user.id, function(error,info){<br>
+                    if(error){<br>
+                    throw error;<br>
+                    } else {<br>
+                        loadGame(info, function(error,game) {<br>
+                            if(error){<br>
+                                    throw error;<br>
+                                } else {<br>
+                                // code to run game<br>
+                            }<br>
+                        });<br>
+                    }<br>
+                    });<br>
+                }<br>
+            });</p>
+            <p>With promises the code will look like this. Much cleaner and understandable.</p>
+            <p>login(userName)<br>
+                .then(user => getPlayerInfo(user.id))<br>
+                .then(info => loadGame(info))<br>
+                .catch( throw error)<br>
+            </p>
+            <p>Pure functions are great and seem like a best practice in writing JavaScript but I don't know if I fully understand how to set up pure functions. These will take some practice to get used to. </p>
+            <p>Chapter 13: AJAX</p>
+            <p>AJAX, or more accurate AJAJ because in most cases we are returning Json objects and not XLM objects, has pushed the UI and UX of web pages because it allows us to load and update a web page without a full reload of the page. you can update parts of a page using API's. These API will fetch data from a server and bring back a response for our webpage to use. Since API's are a major part of web development now this topic is very complex and growing with complexity. I am a little worried about keeping up with API standards and methods. JQuery for example is a great library to use but there with surely be more like it in the future. </p>
+
+        </ul>
+    </div>
+
+    
+</body>
+</html>
