@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@700&family=Handlee&family=La+Belle+Aurore&family=PT+Serif:ital@1&display=swap');
+
+
+/* font-family: 'Corinthia', cursive;
+font-family: 'Handlee', cursive;
+font-family: 'La Belle Aurore', cursive;
+font-family: 'PT Serif', serif; */
+
+
+/* COLORS
+Dark brown: #463F3A
+Mid grey: #8A817C
+Pale silver: #BCB8B1
+light tan: #F4F3EE 
+*/
+
+
+h1 {
+    font-family: 'Corinthia', cursive;
+    /* font-family: 'La Belle Aurore', cursive; */
+}
+h2, h3, h4 {
+    font-family: 'PT Serif', serif;
+}
+body {
+    font-family: 'Handlee', cursive;
+    
+}
+main {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr 1fr;
+    grid-template-rows: 10% auto auto auto;
+    border: 1px solid #463F3A;
+    max-width: 800px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #BCB8B1;
+    overflow: auto;
+}
+.banner {
+    grid-column: 2 / span 3;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.quote, .JournalEntry {
+    grid-column: 2 / span 3;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+}
+.bannerQuote, .titleCard, .dateCard, .subjectCard, .quoted, .author {
+    width: 100%;
+    max-width: 500px;
+    margin: 0;
+    padding: .25rem 0;
+}
+.bannerAuthor {
+    width: 100%;
+    max-width: 500px;
+    text-align: right;
+    padding-right: 2rem;
+    margin: 0 auto;
+}
+.bannerLike, .bannerRefresh {
+    width: 30px;
+   text-align: center;
+
+}
+.bannerLike, .bannerRefresh, .deleteQuote, .deleteEntry, .editEntry {
+    padding: 10px;
+    /* border: 1px solid #463F3A; */
+    border-radius: 5px;
+    width: 20px;
+    height: 20px;
+    margin: .5rem;
+    background-color: #8A817C;
+    color: white;
+}
+.quoteCard, .entryCard {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #F4F3EE ;
+    border: 1px solid #463F3A;
+    margin: 1rem;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 15px;
+    align-items: flex-start;
+}
+.entryCard {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #F4F3EE ;
+    border: 1px solid #463F3A;
+    margin: 1rem;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 15px;
+}
+.modal {
+    grid-column: 2 / span 3;
+}
+
+/* NAV */
+.nav {
+    grid-row: 1 / span 4;
+
+    display: flex;
+    height: 100%;
+    width: ;
+    flex-direction: row;
+    background-color: #463F3A;
+    justify-content: space-between;
+    margin: 0 1rem;
+    color: #F4F3EE ;
+}
+li a {
+    color: white;
+
+}
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.navOpen, .nav-close {
+    margin: 0;
+    text-align: left;
+
+}
+
+.navOpen li:first-child {
+    display: block;
+    padding: .25rem;
+}
+.navOpen li {
+    display: none;
+}
+
+.nav-close li {
+    display: block;
+    padding: .25rem;
+    
+}
+
+
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    align-items: center;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fffcf2;
+    box-shadow: 0 0 15px gray;
+    border-radius: 15px;
+    margin: 1rem auto;
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 400px;
+  }
+  
+  form {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 1rem;  
+
+  }
+  #complete {
+    display: none;
+  }
+
+  label {
+    display: block;
+    width: 95%;
+    padding: 1rem .5rem .25rem .5rem;
+  }
+  input, select, textarea {
+    width: 90%;
+    padding: .25rem;
+    border-radius: 5px;
+  }
+
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .save {
+    padding: .5rem;
+    margin: 1rem auto;
+    background-color: #8A817C;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    align-self: center;
+    width: 30%;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  img {
+    width: 100%;
+  }
+  .wireFrame {
+    width: 100%;
+    grid-column: 2 / span 3;
+  }
